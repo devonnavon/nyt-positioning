@@ -13,19 +13,267 @@ nav {
 	top: 0;
 	display: flex;
 	justify-content: space-between;
-	align-content: stretch;
-	border: 2px solid black;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.192);
 	width: 100%;
 	background: white;
+	padding: 8px 0;
 }
 
 nav > * {
-	flex: 1 0;
+	flex: 1 1;
+	cursor: pointer;
+}
+
+nav > .left {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-left: 10px;
+}
+
+nav > .left > * {
+	margin: 0 9px;
+}
+nav > .left > .section-title {
+	flex: 0 0 auto;
+	font-size: 10px;
+}
+
+nav > .left > .section-title:hover {
+	text-decoration: underline;
+}
+
+nav > .left > i[class$='search'] {
+	font-size: 13px;
+}
+
+nav > .right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+nav > .right > * {
+	margin: 0 5px;
+}
+
+nav .button {
+	border: 2px solid blue;
+	border-radius: 25%;
+	background: mediumorchid;
+	color: white;
+	width: 70px;
+}
+
+nav .button {
+	border: 2px solid blue;
+	background: mediumorchid;
+	text-align: center;
+}
+
+nav .button:hover {
+	text-align: right;
+}
+
+nav > #logo {
+	flex: 0 0.5 200px;
+	background: white;
+}
+
+nav > #logo > img {
+	width: 100%;
 }
 
 #container {
+	width: 1000px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 0 100px;
+	justify-content: center;
+	margin: 150px auto;
+}
+
+figure {
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 40px;
+	margin-inline-end: 40px;
+}
+figure img {
+	width: 1000px;
+	align-items: center;
+}
+
+figcaption {
+	width: 85%;
+	font-size: 0.9rem;
+	font-weight: lighter;
+	color: #666;
+}
+
+h3 {
+	font-family: helvetica, arial, sans-serif;
+	font-weight: 700;
+	color: #333;
+	text-size-adjust: 100%;
+	vertical-align: middle;
+	padding-top: 60px;
+	width: inherit;
+}
+
+.social {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	width: inherit;
+}
+
+article > #author {
+	font-family: helvetica, arial, sans-serif;
+	font-weight: 700;
+	color: #333;
+	text-size-adjust: 100%;
+	vertical-align: middle;
+	padding-top: 60px;
+	width: inherit;
+}
+
+p {
+	font-family: nyt-imperial, georgia, 'times new roman', times, serif;
+	color: #333;
+	font-size: 1.25rem;
+	line-height: 1.875rem;
+	text-align: justify;
+	width: inherit;
+}
+
+h1 {
+	color: #121212;
+	font-family: nyt-cheltenham, georgia, 'times new roman', times, serif;
+	font-weight: 700;
+	font-style: italic;
+	max-width: 600px;
+	font-size: 2.5rem;
+	line-height: 3rem;
+	text-align: center;
+}
+
+h4 {
+	display: block;
+	margin-block-start: 1.33em;
+	margin-block-end: 1.33em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+}
+
+article {
+	width: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+/* Theory Sections */
+.header img {
+	width: 100%;
+}
+
+.header h4 {
+	padding-top: 20px;
+}
+
+.header p {
+	font-family: nyt-cheltenham, georgia, times new roman, times, serif;
+	color: gray;
+}
+
+.image_details,
+.image_details_two {
+	display: flex;
+	position: relative;
+	bottom: 420px;
+}
+
+.image_details_two {
+	bottom: 250px;
+}
+
+.image_details p,
+.image_details_two p {
+	font-family: nyt-franklin, arial, helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 17px;
+	color: #000;
+	font-style: normal;
+	padding-right: 10px;
+	width: 240px;
+	text-align: left;
+}
+
+/* #coffee {
+	margin-right: 30px;
+	padding-right: 0;
+	/* padding-right: 0; */
+} */
+
+.theory {
+	height: 800px;
+	margin-top: 0;
+}
+
+.theory_footer {
+	position: relative;
+	bottom: 220px;
+}
+
+.hr-theory {
+	width: 70px;
+	border: solid 1px black;
+}
+
+.p-theory {
+	font-size: 0.875rem;
+	font-weight: 500;
+	font-style: normal;
+	font-family: nyt-franklin, arial, helvetica, sans-serif;
+	padding-top: 10px;
+}
+
+#bottom-social {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	width: inherit;
+}
+
+.comments {
+	padding: 8px 80px 8px 80px;
+	margin-right: 3px;
+	border: solid 1px #1b546b;
+	border-radius: 4px;
+	background-color: #277391;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	font-size: 10px;
+	cursor: pointer;
+}
+
+.icons {
+	margin-right: 35px;
+}
+
+.icons button {
+	margin-right: 7px;
+	padding: 10px;
+	background-color: #eee;
+	border-radius: 50%;
+	cursor: pointer;
 }
